@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKI KEREN ANJAY - Price List</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Fredoka, Space Grotesk, Space Mono, Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;600;700&family=Space+Grotesk:wght@500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Base typography & Y2K Checkered background */
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #fdf2f8;
+            background-image: 
+                linear-gradient(45deg, #fce7f3 25%, transparent 25%), 
+                linear-gradient(-45deg, #fce7f3 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #fce7f3 75%), 
+                linear-gradient(-45deg, transparent 75%, #fce7f3 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .font-mono-receipt {
+            font-family: 'Space Mono', monospace;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .font-handwriting {
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Y2K Card & Shadows */
+        .y2k-box {
+            background: #ffffff;
+            border: 3.5px solid #000000;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .y2k-box-pink {
+            background: #ffe4e6;
+            border: 3.5px solid #000000;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .y2k-box-yellow {
+            background: #fef08a;
+            border: 3.5px solid #000000;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .y2k-box-cyan {
+            background: #cff4fc;
+            border: 3.5px solid #000000;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .y2k-btn {
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0px #000000;
+            transition: all 0.15s ease;
+        }
+        .y2k-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000000;
+        }
+        .y2k-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #000000;
+        }
+
+        /* Halftone Dot Overlay Pattern */
+        .halftone-pattern {
+            background-image: radial-gradient(#d946ef 20%, transparent 20%);
+            background-size: 14px 14px;
+        }
+
+        .halftone-blue {
+            background-image: radial-gradient(#3b82f6 20%, transparent 20%);
+            background-size: 12px 12px;
+        }
+
+        /* Speech bubble */
+        .speech-bubble {
+            position: relative;
+            background: #dcfce7;
+            border: 2.5px solid #000;
+            border-radius: 999px;
+            box-shadow: 3px 3px 0px #000;
+        }
+
+        /* Tilted text effect */
+        .tilt-left { transform: rotate(-3deg); }
+        .tilt-right { transform: rotate(3deg); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fbcfe8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ec4899;
+            border-radius: 4px;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body class="py-6 px-3 md:px-8 relative flex flex-col items-center justify-start min-h-screen text-gray-900">
+
+    <!-- Y2K BACKGROUND DECORATIVE ELEMENTS (Collage Overlay) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <!-- Giant Starburst Top Right -->
+        <div class="absolute -top-16 -right-16 text-yellow-300 opacity-90 animate-pulse">
+            <svg width="280" height="280" viewBox="0 0 100 100">
+                <path d="M50 0 L60 35 L95 15 L70 45 L100 60 L68 70 L80 100 L50 80 L20 100 L32 70 L0 60 L30 45 L5 15 L40 35 Z" fill="#FACC15" stroke="#000" stroke-width="2.5"/>
+            </svg>
+        </div>
+
+        <!-- Halftone Dot Overlay Block Top Left -->
+        <div class="absolute top-10 left-4 w-40 h-40 halftone-pattern opacity-40 rounded-full"></div>
+        <div class="absolute bottom-20 right-6 w-52 h-52 halftone-blue opacity-30 rounded-full"></div>
+
+        <!-- Floating Y2K Stars -->
+        <div class="absolute top-1/4 left-6 text-pink-500 text-3xl animate-bounce" style="animation-duration: 3s;">✦</div>
+        <div class="absolute top-1/3 right-10 text-cyan-400 text-4xl transform rotate-12">★</div>
+        <div class="absolute bottom-1/3 left-10 text-purple-500 text-5xl transform -rotate-12">✦</div>
+        <div class="absolute bottom-1/4 right-12 text-yellow-400 text-3xl">★</div>
+
+        <!-- Floating Y2K Butterfly (SVG) -->
+        <div class="absolute top-48 left-12 opacity-80 transform -rotate-12 hidden md:block">
+            <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
+                <path d="M50 50 Q 20 10 10 35 Q 10 60 50 50 Z" fill="#38BDF8" stroke="#000" stroke-width="3"/>
+                <path d="M50 50 Q 80 10 90 35 Q 90 60 50 50 Z" fill="#38BDF8" stroke="#000" stroke-width="3"/>
+                <path d="M50 50 Q 25 80 20 90 Q 40 95 50 50 Z" fill="#F472B6" stroke="#000" stroke-width="3"/>
+                <path d="M50 50 Q 75 80 80 90 Q 60 95 50 50 Z" fill="#F472B6" stroke="#000" stroke-width="3"/>
+                <line x1="50" y1="25" x2="50" y2="75" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <!-- Floating Music Notes Bottom Left -->
+        <div class="absolute bottom-12 left-16 text-purple-600 text-4xl opacity-70">
+            <i class="fa-solid fa-music"></i>
+        </div>
+    </div>
+
+    <!-- FLOATING ORDER NOW BUTTON (Direct WhatsApp) -->
+    <a href="https://wa.me/qr/2QSUHKXWHJ52L1" target="_blank" 
+       class="fixed bottom-6 right-6 z-50 y2k-btn bg-emerald-400 hover:bg-emerald-300 text-black font-extrabold px-5 py-3 rounded-full flex items-center gap-3 text-sm tracking-wide shadow-2xl">
+        <i class="fa-brands fa-whatsapp text-2xl text-emerald-950"></i>
+        <span>CHAT & ORDER VIA WA</span>
+        <span class="w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+    </a>
+
+    <!-- TOP CONTROL BAR & SEARCH -->
+    <header class="relative z-20 w-full max-w-4xl mb-6">
+        <div class="y2k-box-yellow p-4 rounded-2xl flex flex-wrap items-center justify-between gap-4">
+            
+            <!-- Brand Badge -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-pink-500 text-white border-2 border-black rounded-xl flex items-center justify-center font-black text-2xl shadow-[3px_3px_0px_#000]">
+                    JK
+                </div>
+                <div>
+                    <h1 class="font-display font-black text-2xl text-black leading-tight tracking-tight uppercase">
+                        JOKI KEREN ANJAY
+                    </h1>
+                    <p class="text-xs font-bold text-gray-800 flex items-center gap-1">
+                        <span class="inline-block w-2.5 h-2.5 bg-green-500 rounded-full border border-black"></span> 
+                        Digital & Typed Services • Fast Response!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick WhatsApp CTA Header Button -->
+            <a href="https://wa.me/qr/2QSUHKXWHJ52L1" target="_blank" 
+               class="y2k-btn bg-green-400 hover:bg-green-300 font-black text-xs px-4 py-2.5 rounded-xl flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Tanya / Order WA</span>
+            </a>
+        </div>
+
+        <!-- Search Input Bar -->
+        <div class="mt-3 relative">
+            <input type="text" id="searchInput" placeholder="🔍 Cari tugas kamu di sini... (misal: Makalah, SPSS, Poster, Resume)" 
+                   class="w-full pl-4 pr-10 py-3 font-semibold text-sm bg-white border-3 border-black rounded-xl shadow-[4px_4px_0px_#000] focus:outline-none focus:ring-4 focus:ring-pink-300">
+        </div>
+    </header>
+
+    <!-- CATEGORY FILTER BUTTONS -->
+    <nav class="relative z-20 w-full max-w-4xl mb-6 overflow-x-auto pb-2 flex gap-2.5" id="categoryNav">
+        <!-- Filter buttons generated via Javascript -->
+    </nav>
+
+    <!-- MAIN COLLAGE CONTAINER -->
+    <main class="relative z-10 w-full max-w-2xl mx-auto my-2">
+
+        <!-- COLLAGE DECORATION: TOP SPEECH BUBBLE (Left) -->
+        <div class="absolute -top-6 -left-6 z-30 hidden sm:block tilt-left">
+            <div class="speech-bubble px-3 py-1.5 text-xs font-bold text-black flex items-center gap-1.5">
+                <span>💬</span>
+                <span>I was better before!</span>
+            </div>
+        </div>
+
+        <!-- COLLAGE DECORATION: TOP SPEECH BUBBLE (Right) -->
+        <div class="absolute -top-7 -right-6 z-30 hidden sm:block tilt-right">
+            <div class="speech-bubble bg-pink-200 px-3 py-1.5 text-xs font-bold text-black flex items-center gap-1.5">
+                <span>⚡</span>
+                <span>Tugas Beres, CS FAST!</span>
+            </div>
+        </div>
+
+        <!-- Y2K FLOWER ICON DECORATION -->
+        <div class="absolute -bottom-8 -left-8 z-30 hidden sm:block">
+            <svg width="75" height="75" viewBox="0 0 100 100">
+                <g fill="#A3E635" stroke="#000" stroke-width="4">
+                    <circle cx="50" cy="22" r="16" />
+                    <circle cx="50" cy="78" r="16" />
+                    <circle cx="22" cy="50" r="16" />
+                    <circle cx="78" cy="50" r="16" />
+                </g>
+                <circle cx="50" cy="50" r="18" fill="#FACC15" stroke="#000" stroke-width="4" />
+            </svg>
+        </div>
+
+        <!-- PIXEL CURSOR STICKER -->
+        <div class="absolute top-1/2 -right-8 z-30 pointer-events-none hidden md:block">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="white" stroke="black" stroke-width="2">
+                <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+            </svg>
+        </div>
+
+        <!-- MAIN PRICE LIST CARD (RECEIPT STYLE WITH Y2K TWIST) -->
+        <article class="y2k-box rounded-3xl p-6 md:p-8 relative bg-white">
+            
+            <!-- PRICE LIST TITLE HEADER -->
+            <div class="text-center mb-6 pb-4 border-b-4 border-dashed border-black">
+                <!-- Retro Banner Header -->
+                <div class="inline-block y2k-box-yellow px-6 py-2 rounded-xl mb-2 transform -rotate-1">
+                    <h2 class="font-display font-black text-3xl md:text-4xl text-black tracking-wider uppercase">
+                        PRICE LIST
+                    </h2>
+                </div>
+                <p class="font-bold text-sm text-pink-600 tracking-wider font-mono-receipt mt-1">@JOKIKERENANJAY</p>
+                <p class="text-xs font-bold text-gray-500 mt-1">✨ All services are digital/typed. Tidak menerima tugas tulis tangan ✨</p>
+            </div>
+
+            <!-- PRICE LIST ITEMS DISPLAY CONTAINER -->
+            <div id="receiptItemsContainer" class="space-y-4 min-h-[350px]">
+                <!-- Dynamic Items Rendered Here -->
+            </div>
+
+            <!-- CARD FOOTER NOTE -->
+            <div class="mt-8 pt-4 border-t-4 border-dashed border-black">
+                <div class="y2k-box-pink p-3 rounded-xl text-xs font-bold space-y-1">
+                    <p class="text-pink-900 font-extrabold uppercase">📌 CATATAN PENTING:</p>
+                    <p>• Harga tertera adalah estimasi awal, dapat menyesuaikan tingkat kesulitan & deadline.</p>
+                    <p>• Pengerjaan cepat, rapi, dan kerahasiaan terjamin 100%.</p>
+                </div>
+            </div>
+
+            <!-- BARCODE STICKER AT BOTTOM -->
+            <div class="mt-6 flex flex-col items-center justify-center pt-2">
+                <svg class="h-10 w-56 text-black" viewBox="0 0 220 50" fill="currentColor">
+                    <rect x="0" y="0" width="3" height="40"/>
+                    <rect x="5" y="0" width="1" height="40"/>
+                    <rect x="8" y="0" width="4" height="40"/>
+                    <rect x="15" y="0" width="2" height="40"/>
+                    <rect x="20" y="0" width="1" height="40"/>
+                    <rect x="24" y="0" width="5" height="40"/>
+                    <rect x="32" y="0" width="2" height="40"/>
+                    <rect x="36" y="0" width="3" height="40"/>
+                    <rect x="42" y="0" width="1" height="40"/>
+                    <rect x="46" y="0" width="4" height="40"/>
+                    <rect x="53" y="0" width="2" height="40"/>
+                    <rect x="58" y="0" width="6" height="40"/>
+                    <rect x="67" y="0" width="1" height="40"/>
+                    <rect x="71" y="0" width="3" height="40"/>
+                    <rect x="77" y="0" width="2" height="40"/>
+                    <rect x="82" y="0" width="5" height="40"/>
+                    <rect x="90" y="0" width="1" height="40"/>
+                    <rect x="94" y="0" width="4" height="40"/>
+                    <rect x="101" y="0" width="2" height="40"/>
+                    <rect x="106" y="0" width="3" height="40"/>
+                    <rect x="112" y="0" width="1" height="40"/>
+                    <rect x="116" y="0" width="5" height="40"/>
+                    <rect x="124" y="0" width="2" height="40"/>
+                    <rect x="129" y="0" width="4" height="40"/>
+                    <rect x="136" y="0" width="1" height="40"/>
+                    <rect x="140" y="0" width="3" height="40"/>
+                    <rect x="146" y="0" width="6" height="40"/>
+                    <rect x="155" y="0" width="2" height="40"/>
+                    <rect x="160" y="0" width="1" height="40"/>
+                    <rect x="164" y="0" width="4" height="40"/>
+                    <rect x="171" y="0" width="3" height="40"/>
+                    <rect x="177" y="0" width="1" height="40"/>
+                    <rect x="181" y="0" width="5" height="40"/>
+                    <rect x="189" y="0" width="2" height="40"/>
+                    <rect x="194" y="0" width="4" height="40"/>
+                </svg>
+                <p class="text-[11px] font-mono tracking-widest text-black font-bold mt-1">JOKIKERENANJAY-2026</p>
+            </div>
+        </article>
+
+        <!-- STICKY CONTACT CARD & WA LINK -->
+        <div class="mt-6 y2k-box-cyan p-5 rounded-2xl relative">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <h3 class="font-handwriting text-3xl font-bold text-black leading-none mb-1">
+                        Tanya-tanya dulu aja, GRATIS! 💬
+                    </h3>
+                    <p class="text-xs font-bold text-gray-700">Langsung hubungi kontak kami di bawah:</p>
+                    
+                    <div class="mt-3 space-y-1.5 text-xs font-bold">
+                        <p class="flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-pink-600 text-base"></i>
+                            <span>IG: <a href="https://instagram.com/jokikerenanjay" target="_blank" class="underline hover:text-pink-600">@jokikerenanjay</a></span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+                            <span>WA: <a href="https://wa.me/qr/2QSUHKXWHJ52L1" target="_blank" class="underline hover:text-emerald-700">082143646601</a></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Direct WhatsApp Link Button -->
+                <a href="https://wa.me/qr/2QSUHKXWHJ52L1" target="_blank" 
+                   class="y2k-btn bg-emerald-400 hover:bg-emerald-300 text-black font-extrabold text-xs px-4 py-3 rounded-xl flex items-center gap-2 whitespace-nowrap">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>CHAT WHATSAPP NOW</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- TERMS & CONDITIONS SECTION -->
+    <section class="relative z-10 w-full max-w-2xl mx-auto my-6 y2k-box p-6 rounded-2xl bg-white">
+        <h3 class="font-display font-black text-lg text-black mb-3 flex items-center gap-2 pb-2 border-b-2 border-black">
+            <i class="fa-solid fa-list-check text-pink-500"></i>
+            <span>KETENTUAN LAYANAN</span>
+        </h3>
+        <ol class="list-decimal list-inside space-y-2 text-xs font-semibold text-gray-800 leading-relaxed">
+            <li>Semua layanan berbentuk <strong class="text-black">digital / ketikan</strong>, tidak menerima tugas tulisan tangan.</li>
+            <li>Tidak menerima tugas Fakultas Teknik dan pekerjaan teknis khusus.</li>
+            <li>Harga menyesuaikan tingkat kesulitan dan jumlah pekerjaan.</li>
+            <li>Deadline dan revisi disepakati di awal sebelum pengerjaan.</li>
+            <li>Untuk tugas akademik, layanan berupa bimbingan, editing, review, pemformatan, dan pengolahan data bersama klien.</li>
+            <li>Silakan konsultasi terlebih dahulu sebelum melakukan pemesanan.</li>
+        </ol>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 text-center text-xs font-bold text-black py-6">
+        <p>© 2026 JOKI KEREN ANJAY • Creative & Aesthetic Digital Price List</p>
+    </footer>
+
+    <!-- JAVASCRIPT DATA & LOGIC -->
+    <script>
+        // FULL PRICE LIST DATA EXTRACTED FROM YOUR PDF
+        const priceListData = [
+            {
+                id: 'smp-sma',
+                title: '1. TUGAS SMP & SMA',
+                badgeBg: 'bg-pink-100 text-pink-800 border-pink-400',
+                items: [
+                    { name: 'Rangkuman Materi', price: 'Rp3.000 - 15.000' },
+                    { name: 'Resume Buku / Film', price: 'Rp5.000 - 20.000' },
+                    { name: 'Review Buku / Film', price: 'Rp5.000 - 20.000' },
+                    { name: 'Essay Sederhana', price: 'Rp5.000 - 30.000' },
+                    { name: 'Kliping Digital', price: 'Rp10.000 - 25.000' },
+                    { name: 'Makalah Sederhana', price: 'Mulai Rp15.000' },
+                    { name: 'Peta Konsep / Mind Map Digital', price: 'Rp10.000 - 20.000' },
+                    { name: 'Infografis Materi Pelajaran', price: 'Rp10.000 - 20.000' },
+                    { name: 'Poster Tugas Sekolah', price: 'Rp15.000' },
+                    { name: 'Brosur / Pamflet', price: 'Rp15.000' },
+                    { name: 'Tabel dan Grafik', price: 'Rp5.000 - 15.000' },
+                    { name: 'Naskah Pidato / Presentasi', price: 'Rp5.000 - 20.000' },
+                    { name: 'Review Artikel / Berita', price: 'Rp5.000 - 15.000' },
+                    { name: 'Booklet Digital', price: 'Rp15.000 - 30.000' },
+                    { name: 'Terjemahan Sederhana', price: 'Mulai Rp5.000' }
+                ]
+            },
+            {
+                id: 'mahasiswa',
+                title: '2. TUGAS MAHASISWA',
+                badgeBg: 'bg-cyan-100 text-cyan-800 border-cyan-400',
+                items: [
+                    { name: 'Makalah', price: 'Rp1.500 / halaman' },
+                    { name: 'Essay', price: 'Rp3.000 - 30.000' },
+                    { name: 'Resume / Rangkuman Jurnal', price: 'Rp5.000 - 30.000' },
+                    { name: 'Review Jurnal', price: 'Rp10.000 - 30.000' },
+                    { name: 'Literature Review', price: 'Mulai Rp20.000' },
+                    { name: 'Laporan Observasi', price: 'Mulai Rp15.000' },
+                    { name: 'Laporan Wawancara', price: 'Mulai Rp15.000' },
+                    { name: 'Laporan Praktikum (Berdasarkan Data)', price: 'Mulai Rp15.000' },
+                    { name: 'Laporan PKL / Magang', price: 'Rp15.000 / halaman' },
+                    { name: 'Laporan Penelitian', price: 'Mulai Rp20.000' },
+                    { name: 'Proposal Penelitian', price: 'Mulai Rp25.000' },
+                    { name: 'Review Proposal', price: 'Mulai Rp15.000' },
+                    { name: 'Artikel Ilmiah (Editing/Formatting)', price: 'Mulai Rp20.000' },
+                    { name: 'Presentasi Seminar', price: 'Mulai Rp30.000' },
+                    { name: 'Naskah Presentasi', price: 'Rp10.000 - 25.000' },
+                    { name: 'Terjemahan Abstrak', price: 'Mulai Rp10.000' }
+                ]
+            },
+            {
+                id: 'event',
+                title: '3. EVENT & ORGANISASI KAMPUS',
+                badgeBg: 'bg-yellow-100 text-yellow-800 border-yellow-400',
+                items: [
+                    { name: 'Proposal Kegiatan', price: 'Mulai Rp20.000' },
+                    { name: 'TOR Kegiatan', price: 'Mulai Rp10.000' },
+                    { name: 'Rundown Acara', price: 'Mulai Rp10.000' },
+                    { name: 'RAB Kegiatan', price: 'Mulai Rp15.000' },
+                    { name: 'LPJ Kegiatan', price: 'Mulai Rp15.000' },
+                    { name: 'MoU / Surat Kerja Sama', price: 'Mulai Rp15.000' },
+                    { name: 'Surat Undangan', price: 'Rp3.000 - 5.000' },
+                    { name: 'Surat Peminjaman Tempat', price: 'Rp3.000 - 5.000' },
+                    { name: 'Surat Permohonan Sponsor', price: 'Rp5.000' },
+                    { name: 'Notulen Rapat', price: 'Mulai Rp5.000' },
+                    { name: 'Timeline Kegiatan', price: 'Rp10.000' },
+                    { name: 'Susunan Kepanitiaan', price: 'Rp5.000' },
+                    { name: 'Proposal Sponsorship', price: 'Mulai Rp20.000' },
+                    { name: 'Database Peserta di Excel', price: 'Mulai Rp10.000' }
+                ]
+            },
+            {
+                id: 'desain',
+                title: '4. DESAIN & KREATIF DIGITAL',
+                badgeBg: 'bg-purple-100 text-purple-800 border-purple-400',
+                items: [
+                    { name: 'Desain Poster', price: 'Mulai Rp15.000' },
+                    { name: 'Feed Instagram', price: 'Mulai Rp10.000' },
+                    { name: 'Story Instagram', price: 'Mulai Rp5.000' },
+                    { name: 'Carousel Instagram', price: 'Mulai Rp20.000' },
+                    { name: 'Pamflet / Brosur', price: 'Mulai Rp15.000' },
+                    { name: 'Sertifikat Digital', price: 'Mulai Rp10.000' },
+                    { name: 'Desain CV', price: 'Mulai Rp15.000' },
+                    { name: 'Portofolio Digital', price: 'Mulai Rp30.000' },
+                    { name: 'Infografis', price: 'Mulai Rp15.000' },
+                    { name: 'E-Book / Booklet', price: 'Mulai Rp20.000' },
+                    { name: 'Desain Cover Makalah', price: 'Rp5.000' },
+                    { name: 'Desain Cover Laporan', price: 'Rp5.000' }
+                ]
+            },
+            {
+                id: 'office',
+                title: '5. OFFICE & DIGITAL DOCUMENT',
+                badgeBg: 'bg-green-100 text-green-800 border-green-400',
+                items: [
+                    { name: 'Merapikan Dokumen', price: 'Rp1.000 / halaman' },
+                    { name: 'Daftar Isi', price: 'Rp5.000' },
+                    { name: 'Daftar Tabel', price: 'Rp3.000' },
+                    { name: 'Daftar Gambar', price: 'Rp3.000' },
+                    { name: 'Daftar Pustaka', price: 'Rp3.000' },
+                    { name: 'Lembar Pengesahan', price: 'Rp2.000' },
+                    { name: 'Penomoran Halaman', price: 'Rp3.000' },
+                    { name: 'Format Dokumen', price: 'Mulai Rp5.000' },
+                    { name: 'Tabel Word', price: 'Mulai Rp3.000' },
+                    { name: 'Excel Sederhana', price: 'Mulai Rp10.000' },
+                    { name: 'Google Sheets', price: 'Mulai Rp15.000' },
+                    { name: 'Grafik / Diagram', price: 'Mulai Rp5.000' },
+                    { name: 'Konversi PDF / Word', price: 'Mulai Rp3.000' }
+                ]
+            },
+            {
+                id: 'spss',
+                title: '6. SPSS & DATA PROCESSING',
+                badgeBg: 'bg-orange-100 text-orange-800 border-orange-400',
+                items: [
+                    { name: 'Uji Validitas dan Reliabilitas', price: 'Paket SPSS' },
+                    { name: 'Uji Normalitas', price: 'Paket SPSS' },
+                    { name: 'Uji Korelasi', price: 'Paket SPSS' },
+                    { name: 'Regresi', price: 'Paket SPSS' },
+                    { name: 'Uji t', price: 'Paket SPSS' },
+                    { name: 'Interpretasi Output SPSS', price: 'Paket SPSS' },
+                    { name: 'Pembuatan Grafik & Tabel Analisis', price: 'Paket SPSS' },
+                    { name: '⭐ Paket Pengolahan Data SPSS', price: 'Rp15.000 - 35.000' }
+                ]
+            }
+        ];
+
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        const receiptContainer = document.getElementById('receiptItemsContainer');
+        const categoryNav = document.getElementById('categoryNav');
+        const searchInput = document.getElementById('searchInput');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCategoryNav();
+            renderReceiptContent();
+        });
+
+        // RENDER CATEGORY NAVIGATION
+        function renderCategoryNav() {
+            let html = `
+                <button onclick="setCategory('all')" 
+                        class="y2k-btn font-bold text-xs px-3.5 py-2 rounded-xl whitespace-nowrap ${
+                            currentCategory === 'all' ? 'bg-black text-white' : 'bg-white text-black'
+                        }">
+                    ⭐ Semua
+                </button>
+            `;
+
+            priceListData.forEach(cat => {
+                const isActive = currentCategory === cat.id;
+                html += `
+                    <button onclick="setCategory('${cat.id}')" 
+                            class="y2k-btn font-bold text-xs px-3.5 py-2 rounded-xl whitespace-nowrap ${
+                                isActive ? 'bg-pink-500 text-white' : 'bg-white text-black'
+                            }">
+                        ${cat.title.replace(/^\d+\.\s*/, '')}
+                    </button>
+                `;
+            });
+
+            categoryNav.innerHTML = html;
+        }
+
+        function setCategory(catId) {
+            currentCategory = catId;
+            renderCategoryNav();
+            renderReceiptContent();
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            renderReceiptContent();
+        });
+
+        // RENDER PRICE LIST ITEMS
+        function renderReceiptContent() {
+            let filteredCategories = priceListData;
+
+            if (currentCategory !== 'all') {
+                filteredCategories = priceListData.filter(c => c.id === currentCategory);
+            }
+
+            let html = '';
+
+            filteredCategories.forEach(category => {
+                const matchingItems = category.items.filter(item => 
+                    item.name.toLowerCase().includes(searchQuery) || 
+                    category.title.toLowerCase().includes(searchQuery)
+                );
+
+                if (matchingItems.length > 0) {
+                    html += `
+                        <div class="pt-2">
+                            <span class="inline-block border-2 border-black font-extrabold text-xs px-2.5 py-1 rounded-lg ${category.badgeBg} shadow-[2px_2px_0px_#000]">
+                                ${category.title}
+                            </span>
+                        </div>
+                    `;
+
+                    matchingItems.forEach(item => {
+                        // Direct WhatsApp ordering link prefilled with item name
+                        const waMsg = encodeURIComponent(`Halo Joki Keren Anjay, saya mau tanya/order layanan: ${item.name}`);
+                        const itemWaUrl = `https://wa.me/qr/2QSUHKXWHJ52L1`;
+
+                        html += `
+                            <a href="${itemWaUrl}" target="_blank" title="Klik untuk order via WhatsApp" 
+                               class="flex items-center justify-between p-2 rounded-xl border-2 border-transparent hover:border-black hover:bg-yellow-50 transition group">
+                                <div class="flex items-center gap-2 pr-2">
+                                    <span class="text-pink-500 opacity-0 group-hover:opacity-100 transition-opacity">➔</span>
+                                    <span class="font-bold text-xs text-gray-800 group-hover:text-black">${item.name}</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-mono-receipt font-bold text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                                        ${item.price}
+                                    </span>
+                                    <i class="fa-brands fa-whatsapp text-emerald-600 text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </a>
+                        `;
+                    });
+                }
+            });
+
+            if (html === '') {
+                html = `
+                    <div class="text-center py-12 text-gray-400">
+                        <i class="fa-solid fa-face-frown text-3xl mb-2"></i>
+                        <p class="font-bold text-sm">Layanan "${searchQuery}" tidak ditemukan.</p>
+                        <p class="text-xs">Coba cari dengan kata kunci lain!</p>
+                    </div>
+                `;
+            }
+
+            receiptContainer.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
